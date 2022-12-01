@@ -4,9 +4,12 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"github.com/onainadapdap1/jwt-gin/models"
 )
 
 func main() {
+	// connect to database mysql
+	models.ConnectDatabase()
 	// set gin router
 	r := gin.Default()
 
